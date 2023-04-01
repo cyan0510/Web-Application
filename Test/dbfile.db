@@ -1,0 +1,40 @@
+CREATE TABLE `users` (
+  `user_id` int(8) unsigned NOT NULL AUTO_INCREMENT,
+  `user_lastname` varchar(180) NOT NULL DEFAULT '',
+  `user_firstname` varchar(180) NOT NULL DEFAULT '',
+  `user_email` varchar(180) NOT NULL DEFAULT '',
+  `user_password` varchar(180) NOT NULL DEFAULT '',
+  `user_status` int(1) NOT NULL DEFAULT 1,
+  `user_access` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10000001 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE `products` (
+  `product_ID` int(11) NOT NULL auto_increment,
+  `name` varchar(50) NOT NULL default '',
+  `description` varchar(50) NOT NULL default '',
+  `price` int(255) NOT NULL,
+  `type_id` int(50) NOT NULL,
+  PRIMARY KEY (`product_ID`),
+  KEY `type_id` (`type_id`)	
+);
+
+CREATE TABLE `prod_type` (
+  `type_id` int(3) unsigned NOT NULL AUTO_INCREMENT,
+  `type_name` varchar(180) NOT NULL DEFAULT '',
+  `type_status` int(1) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`type_id`)
+
+CREATE TABLE `sale_list` (
+  `id` int(11) NOT NULL,
+  `client_name` text DEFAULT NULL,
+  `amount` varchar(100) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `sales_id` (
+  `payment_id` int(11) NOT NULL,
+  `status` varchar(200) DEFAULT NULL,
+  `remarks` varchar(500) DEFAULT NULL)
+);
