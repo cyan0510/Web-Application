@@ -1,0 +1,36 @@
+Change Log
+
+05/05/2023
+Added
+•Added ability to edit existing sales records(Version 1.0)
+•Password Encryption
+•Password Verification
+•User Access
+	- Manager, Staff User Access
+
+Fixed
+•Data Duplication when adding orders.
+•Sales Duplication
+
+Removed
+•sales_id from the database
+
+05/01/2023
+Added
+ • Added ability to edit existing sales records(WIP)
+
+
+04/10/2023
+
+Added
+ • Added foreign key constraint to product_ID column in sales table
+ • Added new report showing sales by product
+
+Changed
+ • Updated database schema to include 'product_ID' to 'sales' table
+
+Fixed
+ • Fixed issue where duplicate sales could be added if form was submitted multiple times
+ • Fixed issue where sorting by client name on sales list page was not working correctly
+ • Fixed issue where blank product names could be added to products table
+
